@@ -1,0 +1,222 @@
+body,html {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    min-height: 100%;
+    padding: 0;
+    background: #fff;
+}
+
+/* 个人信息 */
+.user_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .4rem 1rem;
+    box-sizing: border-box;
+}
+
+.user_info_l {
+    display: flex;
+    align-items: center;
+    font-size: .7rem;
+    color: #353535;
+}
+
+.user_logo {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin-right: .4rem;
+}
+
+.user_name {
+    height: 1rem;
+    line-height: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.user_name img {
+    width: 1.1rem;
+    height: .5rem;
+    margin-left: .2rem;
+}
+
+.user_time {
+    height: .75rem;
+    line-height: .75rem;
+    font-size: .5rem;
+    color: #999;
+}
+
+.user_info_r {
+    display: flex;
+    align-items: center;
+    font-size: .5rem;
+    color: #999;
+}
+
+.user_info_r img {
+    width: .75rem;
+    height: .75rem;
+    margin-right: 0.2rem;
+}
+
+/* 心情内容 */
+.content {
+    padding-bottom: 2rem;
+}
+
+/* 标题 */
+.title {
+    height: 1.5rem;
+    line-height: 1.5rem;
+    color: #353535;
+    font-weight: 700;
+    font-size: .9rem;
+    margin-bottom: .4rem;
+    text-indent: 0.4cm;
+}
+
+/* 编译内容 */
+.note {
+    font-size: .7rem !important;
+    color: #353535 !important;
+    line-height: 1.3rem !important;
+    margin-bottom: .8rem;
+    text-align: left !important;
+    text-indent: 0.8cm !important;
+}
+
+.note div {
+    padding: 0 .5rem !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    font-family: '微软雅黑' !important;
+}
+
+.note p {
+    padding: 0 .5rem !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    font-family: '微软雅黑' !important;
+}
+
+.note img {
+    width: 100% !important;
+    margin-bottom: .4rem !important;
+    display: block !important;
+}
+
+.note br {
+    display:none !important;
+}
+
+/* 固定底部 */
+.fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+}
+
+/* 推荐商品 */
+.shop {
+    padding: 0 1rem;
+    margin-bottom: .6rem;
+    box-sizing: border-box;
+}
+
+.shop_list {
+    border: 1px solid #EDEDED;
+    padding: .5rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+.shop_logo {
+    width: 4.5rem;
+    margin-right: .8rem
+}
+
+.shop_logo img {
+    width: 100%;
+}
+
+.shop_list_r {
+    flex: 1;
+}
+
+.shop_name {
+    height: 1rem;
+    line-height: 1rem;
+    color: #353535;
+    font-size: .7rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.shop_price {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    margin-top: .4rem;
+    height: 1rem;
+    font-size: .7rem;
+    color: #FF474C;
+}
+
+.shop_price span {
+    color: #353535;
+    font-weight: 400;
+    margin-left: .4rem;
+}
+
+.shop_price img {
+    width: 1.1rem;
+    height: .5rem;
+    margin-left: 0.1rem;
+}
+
+.shop_btn {
+    width: 4rem;
+    text-align: center;
+    height: 1.25rem;
+    line-height: 1.25rem;
+    background: #FF474C;
+    color: #fff;
+    font-size: .6rem;
+    border-radius: 1.25rem;
+    margin-top: .5rem;
+}
+
+/* 心情互动 */
+.mood {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 2rem;
+    border-top: 1px solid #EDEDED;
+    font-size: .6rem;
+    color: #999;
+    box-sizing: border-box;
+}
+
+.mood div {
+    display: flex;
+    align-items: center;
+}
+
+.mood img {
+    width: .8rem;
+    height: .8rem;
+    margin-right: .2rem;
+}

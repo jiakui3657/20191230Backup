@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 20px;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>好物详情</title>
+    <!-- <script src="../plugins/rem.js"></script> -->
+    <link rel="stylesheet" href="./news_details.css">
+</head>
+<body>
+<div class="container">
+    
+    <!-- 个人信息 -->
+    <div class="user_info">
+      <div class="user_info_l">
+        <img class="user_logo" src="https://b2ctest.huala.com/res/app/consumer/images/test/seckill_shop.png"></img>
+        <div class="infp">
+          <div class="user_name">
+            <span>杨先森</span>
+            <img src="https://b2ctest.huala.com/res/app/consumer/images/online/common/vip_icon.png"></img>
+          </div>
+          <div class="user_time">06-15  20:23</div>
+        </div>
+      </div>
+      <div class="user_info_r">
+        <img src="https://b2ctest.huala.com/res/app/consumer/images/online/we/collect/browse.png"></img>
+        <span>1563人看过</span>
+      </div>
+    </div>
+  
+    <!-- 心情内容 -->
+    <div class="content">
+
+        <!-- 标题 -->
+        <div class="title">【上新】“不用香水的女人没有未来”</div>
+        
+        <!-- 编译内容 -->
+        <div class="note">
+                <p>
+                        下午三点半了，有点小饿小困，来包口TATAWA塔塔瓦曲奇饼干，帮你打走饥饿
+                    </p>
+                    <p>
+                        马来西亚进口TATAWA塔塔瓦曲奇饼干榛果巧克力口味
+                    </p>
+                    <p>
+                        食品描述：精选小麦粉为主要原料，优质可可豆，层层筛选，保证产品的品质。
+                    </p>
+                    <p>
+                        <img src="https://b2c.baiwandian.cn/upload/message/156170605238952.jpg" alt="156170605238952.jpg"/><br/>
+                    </p>
+                    <p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-family: &quot;Microsoft Yahei&quot;, 微软雅黑; font-size: 14px; white-space: normal;">
+                            TATAWA塔塔瓦曲奇饼干不愧是甜品届的新晋网红啊，整个塔塔瓦曲奇饼干吃在嘴里让人感觉到巧克力的丝滑，质感柔软湿润，入口即化，特色的烘培降低了巧克力的热量，有甜而不腻的回味。重要的是能横扫饥饿，继续工作。<br/>
+                    </p>
+                    <p>
+                        TATAWA塔塔瓦曲奇饼干不愧是甜品届的新晋网红啊，整个塔塔瓦曲奇饼干吃在嘴里让人感觉到巧克力的丝滑，质感柔软湿润，入口即化，特色的烘培降低了巧克力的热量，有甜而不腻的回味。重要的是能横扫饥饿，继续工作。
+                    </p>
+                    <p>
+                        <br/>
+                    </p>
+        </div>
+
+       <!-- 推荐商品 -->
+      <div class="shop">
+        <div class="shop_list">
+          <div class="shop_logo"><img src="https://b2ctest.huala.com/res/app/consumer/images/test/seckill_shop.png"></img></div>
+          <div class="shop_list_r">
+            <div class="shop_name">香奈儿蔚蓝男士淡香水50ml</div>
+            <div class="shop_price">¥389<span>￥215</span><img src="https://b2ctest.huala.com/res/app/consumer/images/online/common/vip_icon.png"></img></div>
+            <div class="shop_btn">立即购买</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- 固定底部 -->
+    <div class="fixed">
+      <!-- 心情互动 -->
+      <div class="mood">
+        <div class="praise">
+          <img src="https://b2ctest.huala.com/res/app/consumer/images/online/we/collect/has_praise.png"></img>
+          <span>678</span>
+        </div>
+        <div class="collection">
+          <img src="https://b2ctest.huala.com/res/app/consumer/images/online/we/collect/4.png"></img>
+          <span>678</span>
+        </div>
+      </div>
+    </div>
+
+</div>
+<script src="../plugins/jquery-1.11.0.js"></script>
+<script src="../plugins/jweixin-1.3.2.js"></script>
+<script>
+    window.onload = function () {
+
+        // 获取参数id
+        let str = window.location.search;
+        let id = str.split('=')[1];
+        let shop_id = null;
+        console.log(id)
+
+        // 请求函数
+        let request = (obj) => {
+            return new Promise((resolve, reject) => {
+                $.ajax({
+                    type: 'POST',
+                    url: obj.url,
+                    dataType: 'json',
+                    data: obj.data,
+                    async : false,
+                    success: function(res){
+                        console.log(res);
+                        if(res.code == 200){
+                            resolve(res)
+                        } else {
+                            reject(res)
+                        }
+                    },
+                    error: function(xhr, type){
+                        reject(res)
+                    }
+                });
+            })
+        }
+
+        let obj = {
+            url: '/thing/detail',
+            data: {
+                'thingId': id
+            }
+        }
+
+        request(obj).then((res) => {
+
+        }).catch((res) => {
+
+        })
+
+        // 点赞
+        $('.praise').on('click',function(s) {
+            
+        })
+
+        // 收藏
+        $('.collection').on('click',function(s) {
+            
+        })
+
+        // 跳转商品详情
+        $('.shop_list').on('click',function(s) {
+            wx.miniProgram.navigateTo({
+                url: '/pages/classify/goods_detail/goods_detail?id=' + shop_id
+            })
+        })
+    }
+</script>
+</body>
+</html>
